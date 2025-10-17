@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Washington State Natural Hazards Map</title> <!--Change this!! -->
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    #legend { position:absolute; 
+      bottom: 25px;; 
+      right: 10px;;
+      z-index: 1000;
+      background: white;
+      border-radius: 5px;
+      padding: 5px 10px;
+      box-shadow: 0 0 0 2px rgb(0 0 0 / 10%);
+
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .legend-color-box {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 8px;
+      border: 1px solid #000;
+    }
+
+  </style>
+</head>
+<body>
+
+  
+
+<div id='map'></div>
+
+    <div id="legend">
+        <h4>Legend</h4>
+        <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #733030;"></span>
+            <span class="legend-label">Lahars</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #452a98;"></span>
+            <span class="legend-label">Near-volcano Hazards</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #b918ae;"></span>
+            <span class="legend-label">Regional Lava Flows</span>
+        </div><div class="legend-item">
+            <span class="legend-color-box" style="background-color: #e1c823;"></span>
+            <span class="legend-label">Sediment</span>
+        </div>
+      <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #ff961f;"></span>
+            <span class="legend-label">Lahar Evacuation Routes</span>
+        </div>
+        <div class="legend-item">
+    <img src="graphics/i.svg" alt="Emergency Preparedness Icon" width="16" height="16" style="margin-right: 8px;">
+    <span class="legend-label">Emergency Preparedness Actions</span>
+</div>
+        <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #f05000;"></span>
+            <span class="legend-label">Tsunami Hazard Areas</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #e8f000;"></span>
+            <span class="legend-label">Tsunami Evacuation Routes</span>
+        </div>
+<div class="legend-item">
+    <img src="graphics/shelter.svg" alt="Tsunami Shelter Icon" width="16" height="16" style="margin-right: 8px;">
+    <span class="legend-label">Tsunami Assembly Shelters</span>
+</div>
+
+        <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #00cc25;"></span>
+            <span class="legend-label">Active Geologic Folds</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color-box" style="background-color: #ff0505;"></span>
+            <span class="legend-label">Active Geologic Faults</span>
+        </div>
+        
+        
+        
+        
+   
+  <script>
+    
+    // Change this to your Access token ----------------------
+    mapboxgl.accessToken = 'pk.eyJ1IjoicHVyY2VsbGRqIiwiYSI6ImNtZ3VlN25oajBmM3kybHBvOGp1N3M2MngifQ.v2Zunz8LPnFhMqusLycwCw';
+    // ------------------------------------------------
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+
+      // Change this to your style --------------------
+      style: 'mapbox://styles/purcelldj/cmguarllp001x01t13byg9xik',
+      // ----------------------------------------------
+
+      // Change to your location ----------------------
+      zoom: 6.05,
+      center: [-121.225730, 47.408362
+
+]
+      // ----------------------------------------------
+
+    });
+
+    // Add geolocate control to the map.
+     map.addControl(new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    }));
+  </script>
+
+</body>
+
+</html>
