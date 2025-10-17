@@ -30,8 +30,8 @@ When it came to creating the legend, I had to do a fair amount of googling to fi
 
 # index.html link
 
-Use <a \index.html>this link</a> to reach the index.html file.
-
+Use <a href="https://github.com/purcelldj/map-671-final-purcelldj/blob/main/index.html">this link</a> to reach the index.html file.
+ 
 # Map projection
 
 Some of the original geodata came in EPSG 4326 - WGS 84, but a small majority of the data came in the Washington South State Plane Coordinate System - EPSG 2927. Before I brought the data over to mapbox, I exported all of the data to either GeoJSON or Shapefiles using the EPSG 4326 projection to allow the data to be used by mapbox. 
