@@ -30,7 +30,7 @@ When it came to creating the legend, I had to do a fair amount of googling to fi
 
 # index.html link
 
-Use <a href="https://github.com/purcelldj/map-671-final-purcelldj/blob/main/index.html">this link</a> to reach the index.html file.
+Use <a href="https://purcelldj.github.io/map-671-final-purcelldj/">this link</a> to reach the index.html file.
  
 # Map projection
 
